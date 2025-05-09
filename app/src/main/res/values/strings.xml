@@ -2,6 +2,8 @@
     <string name="app_name">To Do List</string>
     <string name="task_empty">No list yet</string>
     <string name="x_onclick">%1$s on click!</string>
-    <string name="not_yet">Cannot add tasks.</string>
-    <string name="add_task">Add tasks</string>
+    <string name="add_task">Add task</string>
+    <string name="not_yet">Cannot add task.</string>
+    <string name="title">Title</string>
+    <string name="task_content">Content of the task</string>
 </resources>

@@ -15,25 +15,4 @@ class MainViewModel(dao: TaskDao) : ViewModel() {
         started = SharingStarted.WhileSubscribed(),
         initialValue = emptyList()
     )
-    fun getTask(id: Long): Task? {
-        return data.value.find { it.id == id }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
 }

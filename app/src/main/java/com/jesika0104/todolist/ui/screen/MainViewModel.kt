@@ -42,4 +42,7 @@ class MainViewModel : ViewModel() {
             "2025-05-15 12:34:56"
         ),
     )
+    fun getTask(id: Long): Task? {
+        return data.find { it.id == id }
+    }
 }

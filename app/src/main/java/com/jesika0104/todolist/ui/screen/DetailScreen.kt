@@ -35,9 +35,11 @@ import androidx.navigation.compose.rememberNavController
 import com.jesika0104.todolist.R
 import com.jesika0104.todolist.ui.theme.ToDoListTheme
 
+const val KEY_ID_TASK = "idTask"
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DetailScreen(navController: NavHostController) {
+fun DetailScreen(navController: NavHostController, id: Long? = null) {
     var title by remember { mutableStateOf("") }
     var task by remember { mutableStateOf("") }
 
@@ -54,7 +56,10 @@ fun DetailScreen(navController: NavHostController) {
                     }
                 },
                 title = {
-                    Text(text = stringResource(id = R.string.add_task))
+                    if (id == null)
+                        Text(text = stringResource(id = R.string.add_task))
+                    else
+                        Text(text = stringResource(id = R.string.edit_task))
                 },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
@@ -89,7 +94,9 @@ fun FormTask(
     modifier: Modifier
 ) {
     Column(
-        modifier = modifier.fillMaxSize().padding(16.dp),
+        modifier = modifier
+            .fillMaxSize()
+            .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         OutlinedTextField(
@@ -105,7 +112,7 @@ fun FormTask(
         )
         OutlinedTextField(
             value = desc,
-            onValueChange = { onDescChange(it) } ,
+            onValueChange = { onDescChange(it) },
             label = { Text(text = stringResource(R.string.task_content)) },
             keyboardOptions = KeyboardOptions(
                 capitalization = KeyboardCapitalization.Sentences

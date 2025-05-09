@@ -14,4 +14,6 @@
     <string name="delete_task">Delete this task?</string>
     <string name="delete_button">Delete task</string>
     <string name="cancel_button">Cancel</string>
+    <string name="list">List view</string>
+    <string name="grid">Grid view</string>
 </resources>

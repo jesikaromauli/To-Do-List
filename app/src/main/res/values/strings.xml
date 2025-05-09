@@ -3,7 +3,8 @@
     <string name="task_empty">No list yet</string>
     <string name="x_onclick">%1$s on click!</string>
     <string name="add_task">Add task</string>
-    <string name="not_yet">Cannot add task.</string>
     <string name="title">Title</string>
     <string name="task_content">Content of the task</string>
+    <string name="back">Back</string>
+    <string name="save">Save</string>
 </resources>

@@ -32,14 +32,17 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.jesika0104.todolist.R
 import com.jesika0104.todolist.model.Task
+import com.jesika0104.todolist.navigation.Screen
 import com.jesika0104.todolist.ui.theme.ToDoListTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen() {
-    val context = LocalContext.current
+fun MainScreen(navController: NavHostController) {
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -55,7 +58,7 @@ fun MainScreen() {
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {
-                    Toast.makeText(context, R.string.not_yet, Toast.LENGTH_SHORT).show()
+                    navController.navigate(Screen.FormBaru.route)
                 }
             ) {
                 Icon(
@@ -129,6 +132,6 @@ fun TaskItem(task: Task, onClick: () -> Unit) {
 @Composable
 fun MainScreenPreview() {
     ToDoListTheme {
-        MainScreen()
+        MainScreen(rememberNavController())
     }
 }

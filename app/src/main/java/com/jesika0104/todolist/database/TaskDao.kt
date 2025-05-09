@@ -17,4 +17,7 @@ interface TaskDao {
 
     @Query("SELECT * FROM description ORDER BY timestamp DESC")
     fun getTask(): Flow<List<Task>>
+
+    @Query("SELECT * FROM description WHERE id = :id")
+    suspend fun getTaskById(id: Long): Task?
 }

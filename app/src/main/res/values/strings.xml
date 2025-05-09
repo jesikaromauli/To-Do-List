@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">To Do List</string>
     <string name="task_empty">No list yet</string>
-    <string name="x_diklik">%1$s diklik!</string>
+    <string name="x_onclick">%1$s on click!</string>
+    <string name="not_yet">Cannot add tasks.</string>
+    <string name="add_task">Add tasks</string>
 </resources>

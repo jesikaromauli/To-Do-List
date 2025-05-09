@@ -8,5 +8,7 @@
     <string name="back">Back</string>
     <string name="save">Save</string>
     <string name="edit_task">Edit task</string>
-    <string name="invalid">Judul dan isi tugas tidak boleh kosong.</string>
+    <string name="invalid">The title and content of the assignment must not be blank.</string>
+    <string name="other">Other options</string>
+    <string name="delete">Delete task</string>
 </resources>

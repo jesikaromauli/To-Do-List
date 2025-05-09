@@ -11,4 +11,7 @@
     <string name="invalid">The title and content of the assignment must not be blank.</string>
     <string name="other">Other options</string>
     <string name="delete">Delete task</string>
+    <string name="delete_task">Delete this task?</string>
+    <string name="delete_button">Delete task</string>
+    <string name="cancel_button">Cancel</string>
 </resources>
